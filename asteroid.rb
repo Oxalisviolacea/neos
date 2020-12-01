@@ -7,15 +7,9 @@ class Asteroid
     @miss_distance = miss_distance
   end
 
-  # def formatted_hash
-  #         {
-  #       name: name,
-  #       diameter: "#{distance} ft",
-  #        miss_distance: "#{miss_distance} miles"
-  #      }
-  # end
-
-  # def to_s
-  #   "#{name}      | #{distance} ft    | ...."
-  # end
+  def to_s
+    diameter_string = diameter.to_s + " ft"
+    miss_distance_string = miss_distance.to_s + " ft"
+    "|#{name.ljust(20)}|#{diameter_string.ljust(20)}|#{miss_distance_string.ljust(20)}|"
+  end
 end
